@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Header from "../components/Header";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -7,16 +8,11 @@ export default function Home() {
     <div className="">
       <Head>
         <title>Health+</title>
-        <meta
-          name="description"
-          content="Health+ - Home Page"
-        />
+        <meta name="description" content="Health+ - Home Page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Health Plus</h1>
-
-      
+      <Header />
     </div>
   );
 }
