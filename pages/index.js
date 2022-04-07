@@ -9,12 +9,14 @@ export default function Home() {
         <title>Health+</title>
         <meta
           name="description"
-          content="All India Health and Hygiene System"
+          content="Health+ - Home Page"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <h1>Health Plus</h1>
+
+      
     </div>
   );
 }
