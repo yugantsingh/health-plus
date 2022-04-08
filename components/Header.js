@@ -20,14 +20,13 @@ function Header() {
           <Image src={logo} layout="fill" objectFit="contain" />
         </div>
         {/* Logo min responsive at mobile resolutions */}
-        <div className="relative h-24 w-24  lg:hidden flex-shrink-0 cursor-pointer">
+        <div className=" h-24 w-24  lg:hidden flex-shrink-0 cursor-pointer items-center">
           <Image src={logo_min} layout="fill" objectFit="contain" />
         </div>
         {/* Right Side of the Navbar Header - Contains the shortcut icons to differnt sections of the profile of the user*/}
-        <div className="flex items-center justify-end space-x-4">
+        <div className="flex items-center justify-end space-x-4 ">
           <HomeIcon className="navBtn" />
           <ChatAltIcon className="navBtn" />
-          <MenuIcon className="h-6 md:hidden cursor-pointer" />
           <DocumentAddIcon className="navBtn" />
           <UserGroupIcon className="navBtn" />
           <ChipIcon className="navBtn" />
