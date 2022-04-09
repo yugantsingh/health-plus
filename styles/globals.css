@@ -6,6 +6,12 @@
   .navBtn {
     @apply hidden h-6 lg:inline-flex cursor-pointer hover:scale-125 transition-all duration-150 ease-out;
   }
+  .pageBtn{
+    @apply  bg-red-400 rounded-full  h-10  flex cursor-pointer hover:scale-125 transition-all duration-150 ease-out 
+  }
+  .pageDtn{
+    @apply bg-red-400 rounded-full h-10 cursor-not-allowed flex
+  }
 }
 
 html,

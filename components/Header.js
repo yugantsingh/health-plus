@@ -12,7 +12,7 @@ import {
 } from "@heroicons/react/outline";
 function Header() {
   return (
-    <div className="shadow-sm border-b sticky top-0 z-50">
+    <div className="bg-white shadow-sm border-b sticky top-0 z-50">
       <div className="flex justify-between max-w-6xl mx-5 lg:mx-auto">
         {/* Left Side of the Navbar Header - Contains the image of the app in svg format */}
         {/* Logo responsive at Higher resolutions of the display screen */}
