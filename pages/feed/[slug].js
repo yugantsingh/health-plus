@@ -11,6 +11,7 @@ export const Feed = ({ pageNumber, articles }) => {
     <div>
       <Header />
       <main className="grid grid-cols-1 md:grid-cols-1 md:max-w-3xl xl:grid-cols-1 xl:max-w-6xl mx-auto p-3">
+        <h1 className="font-extrabold text-4xl mt-10 mb-5">News Feed:</h1>
         <div>
           {articles.map((article, index) => (
             <div
@@ -19,7 +20,7 @@ export const Feed = ({ pageNumber, articles }) => {
             >
               <div className=" grid grid-cols-1 md:grid-cols-1">
                 <h1
-                  className="cursor-pointer grid grid-cols-1 md:grid-cols-1 text-2xl pb-2 text-center uppercase"
+                  className="cursor-pointer grid grid-cols-1 md:grid-cols-1 text-3xl pb-2 text-center font-medium"
                   onClick={() => (window.location.href = article.url)}
                 >
                   {article.title}
@@ -36,7 +37,7 @@ export const Feed = ({ pageNumber, articles }) => {
             </div>
           ))}
         </div>
-        <div className="flex justify-between ml-10 mr-10 mt-10 mb-5">
+        <div className="flex justify-between ml-10 mr-10 mt-10 mb-20">
           <ArrowCircleLeftIcon
             onClick={() => {
               if (pageNumber > 1) {
@@ -71,7 +72,7 @@ export const getServerSideProps = async (pageContext) => {
     };
   }
   const apiResponse = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=in&category=health&pageSize=5&page=${pageNumber}&apiKey=ddca8b2d94134d599e5ba36c98db1ad9`
+    `https://newsapi.org/v2/top-headlines?country=in&category=health&pageSize=5&page=${pageNumber}&apiKey=${process.env.NEWSAPIKEY}`
   );
 
   const apiJason = await apiResponse.json();
