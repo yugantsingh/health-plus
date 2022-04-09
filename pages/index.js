@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
 
       <Header />
-      
+      <p>Here goes the descriptioon about this project in brief</p>
     </div>
   );
 }

@@ -11,7 +11,7 @@ export const Feed = ({ pageNumber, articles }) => {
     <div>
       <Header />
       <main className="grid grid-cols-1 md:grid-cols-1 md:max-w-3xl xl:grid-cols-1 xl:max-w-6xl mx-auto p-3">
-        <h1 className="font-extrabold text-4xl mt-10 mb-5">News Feed:</h1>
+        <h1 className="text-4xl mt-10 mb-5 font-medium ">News Feed:</h1>
         <div>
           {articles.map((article, index) => (
             <div
