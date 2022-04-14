@@ -24,7 +24,7 @@ function Sidebar() {
     if (
       EmailValidator.validate(input) &&
       input !== session?.user.email &&
-      chatExists
+      !chatExists
     ) {
       setDoc(doc(db, "chats", `${session?.user.email}${input}`), {
         users: [session?.user.email, input],
