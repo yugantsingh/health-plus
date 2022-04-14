@@ -36,7 +36,7 @@ function signIn({ providers }) {
             <div key={provider.id}>
               <button
                 className="p-3 bg-blue-500 rounded-lg text-white"
-                onClick={() => signInto(provider.id, { callbackUrl: "/" })}
+                onClick={() => signInto(provider.id, { callbackUrl: "/profile" })}
               >
                 Sign in with {provider.id}
               </button>
