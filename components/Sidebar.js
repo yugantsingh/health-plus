@@ -17,11 +17,15 @@ import { db } from "../firebase";
 
 function Sidebar() {
   const { data: session } = useSession();
-  const createChat = () => {
+  const createChat = async () => {
     const input = prompt("Please enter email");
-    chatAlreadyExists(input);
+    const chatExists = await chatAlreadyExists(input)
     if (!input) return null;
-    if (EmailValidator.validate(input) && input !== session?.user.email) {
+    if (
+      EmailValidator.validate(input) &&
+      input !== session?.user.email &&
+      chatExists
+    ) {
       setDoc(doc(db, "chats", `${session?.user.email}${input}`), {
         users: [session?.user.email, input],
       });
@@ -29,13 +33,17 @@ function Sidebar() {
   };
 
   const chatAlreadyExists = async (recipientEmail) => {
-    const key = `${session?.user.email}${recipientEmail}`;
-    console.log(key)
-    const docRef = doc(db, "chats", key );
-    const docSnap = await getDoc(docRef);
-    console.log(docSnap.data());
+    const keyLeft = `${session?.user.email}${recipientEmail}`;
+    const keyRight = `${recipientEmail}${session?.user.email}`;
+    const docRefL = doc(db, "chats", keyLeft);
+    const docRefR = doc(db, "chats", keyRight);
+    const docSnapL = await getDoc(docRefL);
+    const docSnapR = await getDoc(docRefR);
+    const lE = docSnapL.exists();
+    const rE = docSnapR.exists();
+    return lE||rE;
   };
-
+  
   return (
     <div className="">
       <div className="sticky top-0 bg-white z-50 mt-2">
