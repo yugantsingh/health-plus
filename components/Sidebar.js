@@ -12,14 +12,28 @@ import {
   doc,
   getDocs,
   getDoc,
+  query,
+  where,
 } from "firebase/firestore";
 import { db } from "../firebase";
+import Chat from "./Chat";
+import {useCollection} from 'react-firebase-hooks/database'
 
 function Sidebar() {
   const { data: session } = useSession();
+  const userEmail = session?.user.email;
+  const chatRef = query(collection(db, 'chats'),where('users','array-contains',`${userEmail}`))
+  const [chatSnap] = useCollection(chatRef);
+  // const getChats = async () => {
+  //   const querySnapshot = await getDocs(collection(db, "chats"));
+
+  //   return querySnapshot.forEach((chat) => {
+  //     <Chat key={chat.id} id={chat.id} user={chat.data().users} />;
+  //   });
+  // };
   const createChat = async () => {
     const input = prompt("Please enter email");
-    const chatExists = await chatAlreadyExists(input)
+    const chatExists = await chatAlreadyExists(input);
     if (!input) return null;
     if (
       EmailValidator.validate(input) &&
@@ -41,9 +55,9 @@ function Sidebar() {
     const docSnapR = await getDoc(docRefR);
     const lE = docSnapL.exists();
     const rE = docSnapR.exists();
-    return lE||rE;
+    return lE || rE;
   };
-  
+
   return (
     <div className="">
       <div className="sticky top-0 bg-white z-50 mt-2">
@@ -75,6 +89,11 @@ function Sidebar() {
           >
             Start A New Chat
           </button>
+        </div>
+        <div className="p-3">
+          {chatSnap?.doc.map(chat => (
+            <Chat key={chat.id} id={chat.id} user={chat.data().users} />
+          ))}
         </div>
       </div>
     </div>
