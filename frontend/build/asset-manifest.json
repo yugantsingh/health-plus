@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7301a5b8.chunk.css",
+    "main.js": "/static/js/main.92f61bcb.chunk.js",
+    "main.js.map": "/static/js/main.92f61bcb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.85498786.js",
+    "runtime-main.js.map": "/static/js/runtime-main.85498786.js.map",
+    "static/css/2.9fca9f18.chunk.css": "/static/css/2.9fca9f18.chunk.css",
+    "static/js/2.d952ba91.chunk.js": "/static/js/2.d952ba91.chunk.js",
+    "static/js/2.d952ba91.chunk.js.map": "/static/js/2.d952ba91.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.fbd13386a6a6a015396a6bda2e15c014.js": "/precache-manifest.fbd13386a6a6a015396a6bda2e15c014.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.9fca9f18.chunk.css.map": "/static/css/2.9fca9f18.chunk.css.map",
+    "static/css/main.7301a5b8.chunk.css.map": "/static/css/main.7301a5b8.chunk.css.map",
+    "static/media/DatabaseFP.jpeg": "/static/media/DatabaseFP.937f6a18.jpeg",
+    "static/media/DoctorFP.jpeg": "/static/media/DoctorFP.ea3ba46b.jpeg",
+    "static/media/Meditech FP Final-01.png": "/static/media/Meditech FP Final-01.b5bfd235.png",
+    "static/media/Meditech FP Final-2-01.png": "/static/media/Meditech FP Final-2-01.b8bd175f.png",
+    "static/media/Meditech.png": "/static/media/Meditech.0d2d38f1.png",
+    "static/media/jj.jpg": "/static/media/jj.fcf46670.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.85498786.js",
+    "static/css/2.9fca9f18.chunk.css",
+    "static/js/2.d952ba91.chunk.js",
+    "static/css/main.7301a5b8.chunk.css",
+    "static/js/main.92f61bcb.chunk.js"
+  ]
+}
