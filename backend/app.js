@@ -36,10 +36,10 @@ app.use("/api/places", placesRoutes);
 
 // error message is thrown if the route user want to access is not present
 
-app.use((req, res, next) => {
-  const error = new HttpError(`Aree bhai ${process.env.NODE_ENV}`, 404);
-  throw error;
-});
+// app.use((req, res, next) => {
+//   const error = new HttpError(`Aree bhai ${process.env.NODE_ENV}`, 404);
+//   throw error;
+// });
 
 //sends the error if present
 app.use((error, req, res, next) => {
