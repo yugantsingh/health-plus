@@ -16,7 +16,7 @@ useEffect(()=> {
   const fetchPlaces = async() =>{
     try{
       const responseData = await sendRequest(
-        `https://health-plus-vit.herokuapp.com/api/places/users/${userId}/vitals`
+      `http://localhost:5000/api/places/users/${userId}/vitals`
       );
       setLoadedVital(responseData.vitals);
     }

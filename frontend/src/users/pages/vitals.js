@@ -23,21 +23,21 @@ const Vitals = () => {
      var height = document.getElementById('height').value;
     try {
         await sendRequest(
-          "https://health-plus-vit.herokuapp.com/api/places/vitals",
-          "POST",
-          JSON.stringify({
-            sugar: sugar,
-            BPS: BPS,
-            BPD: BPD,
-            pulse: pulse,
-            temperature: temperature,
-            date: date,
-            weight: weight,
-            height: height,
-            creator: auth.userId,
-          }),
-          { "Content-Type": "application/json" }
-        );
+            'http://localhost:5000/api/places/vitals',
+            'POST', 
+            JSON.stringify({
+               sugar:sugar, 
+               BPS: BPS,
+               BPD:BPD,
+               pulse:pulse,
+               temperature: temperature,
+               date: date,
+               weight:weight,
+               height:height,
+               creator: auth.userId
+            }),
+     { 'Content-Type': 'application/json' }
+     );
      history.push('/');
   }catch(err){}
   };

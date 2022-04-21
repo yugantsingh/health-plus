@@ -16,8 +16,8 @@ useEffect(()=> {
   const fetchPlaces = async() =>{
     try{
         const responseData = await sendRequest(
-          `https://health-plus-vit.herokuapp.com/api/places/users/${userId}/allergies`
-        );
+            `http://localhost:5000/api/places/users/${userId}/allergies`
+            );
             setLoadedAllergy(responseData.allergies);
     }
     catch(err)

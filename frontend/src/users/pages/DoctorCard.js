@@ -18,7 +18,7 @@ const DoctorCard = props => {
          
               try {
                 const responseData = await sendRequest(
-                    `/api/users/doctor/${props.email}`,
+                    `http://localhost:5000/api/users/doctor/${props.email}`,
                     'POST',
                     JSON.stringify({
                       doctor:props.email,

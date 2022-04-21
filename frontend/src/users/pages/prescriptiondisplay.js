@@ -23,7 +23,7 @@ export const Hello = () => {
       const fetchPlaces = async() =>{
         try{
           const responseData = await sendRequest(
-            `https://health-plus-vit.herokuapp.com/api/places/users/${userId}/prescription/${presID}`
+          `http://localhost:5000/api/places/users/${userId}/prescription/${presID}`
           );
           setLoadedPres(responseData.prescription);
         }
