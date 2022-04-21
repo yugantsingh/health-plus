@@ -25,7 +25,7 @@ const Appointment = () => {
         var docEmail = docId;
         try {
             await sendRequest(
-                "http://localhost:5000/api/users/appointment",
+                "/api/users/appointment",
                 "POST",
                 JSON.stringify({
                     date: date,

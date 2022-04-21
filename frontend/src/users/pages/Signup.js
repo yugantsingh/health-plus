@@ -20,15 +20,15 @@ function Signup() {
     var name =document.getElementById('name').value;
     try {
       const responseData = await sendRequest(
-        'http://localhost:5000/api/users/signup',
-        'POST',
+        "https://health-plus-vit.herokuapp.com/api/users/signup",
+        "POST",
         JSON.stringify({
           name: name,
-           email: email,
-           password:password
+          email: email,
+          password: password,
         }),
         {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         }
       );
 

@@ -21,7 +21,7 @@ const Login =() =>{
     var password = document.getElementById('pass').value;
     try {
       const responseData = await sendRequest(
-        'http://localhost:5000/api/users/login',
+        '/api/users/login',
         'POST',
         JSON.stringify({
           email: email,
