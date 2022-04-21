@@ -36,13 +36,12 @@ app.use("/api/places", placesRoutes);
 
 // error message is thrown if the route user want to access is not present
 
-
 //sends the error if present
 app.use((error, req, res, next) => {
   if (res.headerSent) {
     return next(error);
   }
-  
+
   res.status(error.code || 500);
   res.json({ message: error.message || "unknown error" });
 });
@@ -51,24 +50,23 @@ app.use((error, req, res, next) => {
 mongoose
   .connect(
     "mongodb+srv://Sakshi:123@cluster0.79ts7.mongodb.net/test?retryWrites=true&w=majority"
-    )
-    .then(() => {
-      app.listen(process.env.PORT);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-    
-    __dirname = path.resolve();
-    if (process.env.NODE_ENV === "production") {
-      app.use(express.static(path.join(__dirname, "frontend/build")));
-      app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
-      });
-    }
+  )
+  .then(() => {
+    app.listen(process.env.PORT || 5000);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
+__dirname = path.resolve();
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "frontend/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+  });
+}
 
-    app.use((req, res, next) => {
-      const error = new HttpError(`Aree bhai ${process.env.NODE_ENV}`, 404);
-      throw error;
-    });
+app.use((req, res, next) => {
+  const error = new HttpError(`Aree bhai ${process.env.NODE_ENV}`, 404);
+  throw error;
+});
