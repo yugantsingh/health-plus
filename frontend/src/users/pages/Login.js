@@ -21,14 +21,14 @@ const Login =() =>{
     var password = document.getElementById('pass').value;
     try {
       const responseData = await sendRequest(
-        '/api/users/login',
-        'POST',
+        "https://health-plus-vit.herokuapp.com/api/users/login",
+        "POST",
         JSON.stringify({
           email: email,
-          password: password
+          password: password,
         }),
         {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         }
       );
       auth.login(responseData.user.email, responseData.token);
