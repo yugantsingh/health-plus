@@ -7,16 +7,16 @@
     font-size: 4rem;
     font-family: "Ubuntu", sans-serif;
     font-weight: 650;
-    color: #43bfc7;
+    color: #fc9191;
 }
 .DoctorText {
-    color: #46b6a6;
+    color: rgb(253, 142, 142);
 }
 .ListText {
     color: #43bfc7;
 }
 .BGGradDoctorList {
     width: 100%;
-    background-image: linear-gradient(to bottom, #ffffff, #98f2f8);
+    background-image: linear-gradient(to bottom, #ffffff, #ffc4c4af);
     min-height: 100vh;
 }

@@ -16,11 +16,11 @@ const AllergyCard = (props) => {
               Report
             </Card.Title>
             <Card.Text>
-              Title: {props.title}
-              Place:{props.place}
-              Date:{props.date}
-              Description:{props.description}
-              Medication:{props.meds}
+              <div>Title: {props.title}</div>
+              <div> Place:{props.place}</div>
+              <div> Date:{props.date}</div>
+              <div>Description:{props.description}</div>
+              <div>Medication:{props.meds}</div>
             </Card.Text>
           </Card.Body>
         </Card>

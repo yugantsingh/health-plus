@@ -1,13 +1,13 @@
 .AddPresFullBody {
     padding: 2%;
-    background-image: linear-gradient(to bottom, #ffffff, #98f2f8);
+    background-image: linear-gradient(to bottom, #ffffff, #faafaf);
 }
 .AddPresHeaderBox {
     width: 55%;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
-    background-color: #43bfc7;
+    background-color: #ff8888;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .AddPresBodyBox {

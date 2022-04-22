@@ -2,10 +2,11 @@
     width: 100%;
     background-image: linear-gradient(
         to right,
-        #2883d2,
-        #00daff /* #2883d2 #43bfc7 */
+        #e9aaaa,
+        #faa9a9 
     );
 }
+
 .main-navigation__header-nav {
     display: none;
   }
@@ -79,7 +80,9 @@
 .MediTechLogo {
     font-weight: 700;
     font-size: 27px;
-    font-family: "Ubuntu", sans-serif;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    
 }
 .NavbarLinks {
     color: white;

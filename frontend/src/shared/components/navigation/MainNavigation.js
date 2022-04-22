@@ -11,6 +11,7 @@ import { useHistory } from "react-router-dom";
 import SideDrawer from './SideDrawer';
 import Backdrop from '../UIElements/Backdrop';
 import "../../../css/MainNav.css";
+import logo from '../../health-plus-logo.svg'
 const MainNavigation = () => {
   const auth = useContext(AuthContext);
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
@@ -84,7 +85,7 @@ const MainNavigation = () => {
         </nav>
       </SideDrawer>
         <Navbar sticky="top" bg="dark" variant="dark" className="BGGrade">
-  <Navbar.Brand className="MediTechLogo" href="/home">MediTech</Navbar.Brand>
+  <Navbar.Brand className="MediTechLogo" href="/home">Health+</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto"></Nav>

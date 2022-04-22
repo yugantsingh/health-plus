@@ -19,7 +19,7 @@
         #00daff,
         #2883d2
     ); */
-    background-image: -webkit-linear-gradient(70deg, #43bfc7 50%, #daf3f5 50%);
+    background-image: -webkit-linear-gradient(70deg, #f39f9f69 50%, #fcdede8a 50%);
     min-height: 110vh;
 }
 .TopMarginAllergy {
@@ -27,7 +27,7 @@
     width: 0px;
 }
 .AllergyButton {
-    background-color: #43bfc7;
+    background-color: #2883d2;
     float: right;
 
     font-family: "Montserrat", sans-serif;
@@ -49,7 +49,7 @@
 }
 
 #heading {
-    background-color: #43bfc7;
+    background-color: #f7a6a6;
     text-align: center;
     font-family: "Open Sans", sans-serif;
 }

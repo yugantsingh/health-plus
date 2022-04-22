@@ -15,9 +15,9 @@ const PrescriptionCard = (props) => {
                     </font>
                     <Card.Body>
                         <Card.Title
-                            style={{ fontSize: "2rem", color: "#195a65" }}
+                            style={{ fontSize: "1rem", color: "#195a65" }}
                         >
-                            {props.date}
+                            Date : {props.date}
                         </Card.Title>
                         <Card.Text>
                             Doctor: {props.doctor}

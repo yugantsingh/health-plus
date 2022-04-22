@@ -19,7 +19,6 @@ export const Footer = () => {
             color: "White",
         }}
     >
-        <h3>CodeKar</h3>
     </div>
     );
 };

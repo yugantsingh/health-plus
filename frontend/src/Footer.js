@@ -23,17 +23,17 @@ export const Footer = () => {
                 </Col>
                 <Col sm={2}></Col>
                 <Col sm={3}>
-                    <font className="FooterTeamHeading"> Team CodeKar </font>
+                    <font className="FooterTeamHeading">Find Us On:</font>
                     <hr className="Team" />
                     
                     <font className="FooterTeamText">
-                        Jyotirmay Jain
+                        Instagram
                         <br />
-                        Parth Mittal
+                        Facebook
                         <br />
-                        Abhinav Goel
+                        LinkedIn
                         <br />
-                        Varnika Hotwani
+                        Google
                         {/* <Row>
                             <Col sm={6}>Jyotirmay Jain</Col>
                             <Col sm={6}>Parth Mittal</Col>

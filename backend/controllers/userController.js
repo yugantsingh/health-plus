@@ -204,21 +204,23 @@ const Appointment =async  (req, res, next) => {
 var patName = name;
 
 
-var transporter = nodemailer.createTransport({ // it will provide the mail id password from the the site has to send mails whenever required.
-    service: 'gmail',
-    auth: {
-      user: 'meditech.atyourhelp@gmail.com',
-      pass: 'HelloWorld'
-    }
-  });
+var transporter = nodemailer.createTransport({
+  // it will provide the mail id password from the the site has to send mails whenever required.
+  service: "gmail",
+  auth: {
+    user: "healthplus.atyourhelp@gmail.com",
+    pass: "helloWorld",
+  },
+});
   
-  var mailOptions = { // this will set the content of the mail which the nodemailer will send.
-    from: 'meditech.atyourhelp@gmail.com',
+  var mailOptions = {
+    // this will set the content of the mail which the nodemailer will send.
+    from: "healthplus.atyourhelp@gmail.com",
     to: docEmail,
-    subject: 'Book an appointment',
+    subject: "Book an appointment",
     html: `<p>Hello Doctor,</p>
             <p>The patient ${patName} (${patEmail}) wants to book an appointment with you for ${date}.</p>
-            <p>Regards MediTech</p>`
+            <p>Regards Health-plus</p>`,
   };
   
   transporter.sendMail(mailOptions, function(error, info){ // it will trigger and a mail will be sent to the id provided by user 

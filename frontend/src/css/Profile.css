@@ -1,9 +1,9 @@
 .TabColor {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .BGGradProfile {
     width: 100%;
-    background-image: linear-gradient(to bottom, #ffffff, #98f2f8);
+    background-image: linear-gradient(to bottom, #f8cdcd96, #ffd5d580);
     min-height: 90vh;
 }
 .ProfileCard {
@@ -11,7 +11,7 @@
     /* background-image: linear-gradient(to bottom right, #2884d2, #00daff); */
     border-width: 2px;
     width: 100%;
-    border-color: turquoise;
+    border-color: rgb(224, 101, 64);
 }
 .ProfileCardTextTitle {
     /* color: white; */
