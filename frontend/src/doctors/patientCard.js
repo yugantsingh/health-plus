@@ -32,7 +32,7 @@ const PatientCard = (props) => {
                     </Button>{" "}
                     <Button onClick={routeChange2} variant="outline-success">
                         {" "}
-                        Allergy
+                        Report
                     </Button>{" "}
                 </Card.Body>
             </Card>

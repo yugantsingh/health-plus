@@ -82,7 +82,7 @@ const Profile = () => {
                                 <UserPrescription />
                             </div>
                         </Tab>
-                        <Tab eventKey="allergy" title="Allergy">
+                        <Tab eventKey="allergy" title="Report">
                         <div>
                                <UserAllergy  />
                             </div>

@@ -15,7 +15,7 @@ const AllergyList = props =>{
         return (
         <div className=" place-list centre">
             <Card>
-                <h2> No Allergy Found.</h2>
+                <h2> No Reports Found.</h2>
                 
             </Card>
         </div>
@@ -23,17 +23,20 @@ const AllergyList = props =>{
     }
     console.log(props.items.length);
         console.log(props.items);
-    return(
-    <CardDeck>
-    {props.items.map( v=> (
-    <AllergyCard
-    id={v.id}
-    from={v.from}
-    reaction={v.reaction}
-    creator ={v.creator}
-    />))}
-    </CardDeck> 
-
+    return (
+      <CardDeck>
+        {props.items.map((v) => (
+          <AllergyCard
+            id={v.id}
+            title={v.title}
+            place={v.place}
+            date={v.date}
+            description={v.description}
+            meds={v.meds}
+            creator={v.creator}
+          />
+        ))}
+      </CardDeck>
     );
 };
  export default AllergyList;

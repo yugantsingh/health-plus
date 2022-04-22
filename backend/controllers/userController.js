@@ -81,16 +81,20 @@ const signup =async  (req, res, next) => {
 
 const addallergy =async  (req, res, next) => {
   const errors = validationResult(req);// this will validate the checks we put on user router file for the entries not to be empty.
-  if (!errors.isEmpty()) {
-    throw new HttpError('Invalid inputs passed, please check your data.', 422);
-  }
-  const { from, reaction, creator } = req.body;
+  // if (!errors.isEmpty()) {
+  //   throw new HttpError('Invalid inputs passed, please check your data.', 422);
+  // }
+  const { title, place, date, description, meds, creator } = req.body;
 
 
-  const createdAllergy =new Allergy ({ // create a template for the database to store
-    from, 
-    reaction,
-    creator
+  const createdAllergy = new Allergy({
+    // create a template for the database to store
+    title,
+    place,
+    date,
+    description,
+    meds,
+    creator,
   });
   let patientId;
 

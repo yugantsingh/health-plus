@@ -53,7 +53,7 @@ const MainNavigation = () => {
     {auth.isLoggedIn && !auth.isDoctor &&(<NavLink className="NavbarLinks" to="/allergy">
                             <i class="fas fa-bacteria"></i>
                             {"   "}
-                            Add Your Allergies
+                            Add Your Reports
                         </NavLink>)}
                         </li>
                         <li>
@@ -115,7 +115,7 @@ const MainNavigation = () => {
     {auth.isLoggedIn && !auth.isDoctor &&(<NavLink className="NavbarLinks" to="/allergy">
                             <i class="fas fa-bacteria"></i>
                             {"   "}
-                            Add Your Allergies
+                            Add Your Reports
                         </NavLink>)}
                         {auth.isLoggedIn &&  !auth.isDoctor &&(<Button  onClick={auth.logout} variant="warning">Logout</Button>)}
     {auth.isLoggedIn && auth.isDoctor &&(<Button onClick={auth.doctorlogout} variant="warning">Logout</Button>)}

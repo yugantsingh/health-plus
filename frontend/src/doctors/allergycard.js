@@ -6,23 +6,26 @@ import "../css/DoctorListCard.css";
 
 const AllergyCard = (props) => {
     return (
-        <div>
-            <Card border="info" className="DoctorListCards">
-                <br />
-                <font className="DoctorIcon">
-                    <i className="fas fa-bacteria fa-9x"></i>
-                </font>
-                <Card.Body>
-                    <Card.Title style={{ fontSize: "2rem", color: "#195a65" }}>
-                        Allergy
-                    </Card.Title>
-                    <Card.Text>
-                        Substance: {props.from}
-                        Reaction:{props.reaction}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        </div>
+      <div>
+        <Card border="info" className="DoctorListCards">
+          <br />
+          <font className="DoctorIcon">
+            <i className="fas fa-bacteria fa-9x"></i>
+          </font>
+          <Card.Body>
+            <Card.Title style={{ fontSize: "2rem", color: "#195a65" }}>
+              Report
+            </Card.Title>
+            <Card.Text>
+              Title: {props.title}
+              Place:{props.place}
+              Date:{props.date}
+              Description:{props.description}
+              Medication:{props.meds}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
     );
 };
 

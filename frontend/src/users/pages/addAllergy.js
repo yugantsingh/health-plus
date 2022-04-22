@@ -13,20 +13,26 @@ const Allergy = () => {
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const placeSubmitHandler=async event =>{
      event.preventDefault();
-     var from = document.getElementById('AF'). value;
-     var reaction = document.getElementById('AR').value;
+     var title = document.getElementById('AF'). value;
+     var place = document.getElementById('AR').value;
+     var date = document.getElementById('AS').value;
+     var description = document.getElementById("AT").value;
+     var meds = document.getElementById("AT").value;
 
     try {
         await sendRequest(
-            'http://localhost:5000/api/users/allergy',
-            'POST', 
-            JSON.stringify({
-              from: from,
-              reaction:reaction,
-               creator: auth.userId
-            }),
-     { 'Content-Type': 'application/json' }
-     );
+          "http://localhost:5000/api/users/allergy",
+          "POST",
+          JSON.stringify({
+            title: title,
+            place: place,
+            date: date,
+            description: description,
+            meds: meds,
+            creator: auth.userId,
+          }),
+          { "Content-Type": "application/json" }
+        );
      history.push('/');
   }catch(err){}
   };
@@ -35,46 +41,65 @@ const Allergy = () => {
 
 return (
   <div className="BGGradeAllergy">
-  <div className="TopMarginAllergy"></div>
+    <div className="TopMarginAllergy"></div>
 
-  <div className="box" id="heading">
-      <h1 className="Heading"> Allergy Form</h1>{" "}
-  </div>
-  <Jumbotron className="container" bg-dark>
+    <div className="box" id="heading">
+      <h1 className="Heading"> Report Form</h1>{" "}
+    </div>
+    <Jumbotron className="container" bg-dark>
       <Form className="form-signin" onSubmit={placeSubmitHandler}>
-          <Form.Group controlId="formGroupheart">
-              <Form.Label className="AllergyFormTextLabel">
-                  Allergy From
-              </Form.Label>
-              <Form.Control
-                  type="text"
-                  id="AF"
-                  placeholder="Allergy From"
-                  className="AllergyFormText"
-              />
-          </Form.Group>
-          <Form.Group controlId="formGroupBP">
-              <Form.Label className="AllergyFormTextLabel">
-                  Allergy Reaction
-              </Form.Label>
-              <Form.Control
-                  type="text"
-                  id="AR"
-                  className="AllergyFormText"
-                  placeholder="Allergy Reaction"
-              />
-          </Form.Group>
-          <br />
-          <Button
-              variant="primary"
-              type="submit"
-              className="AllergyButton"
-          >
-              Submit
-          </Button>
+        <Form.Group controlId="formGroupheart">
+          <Form.Label className="AllergyFormTextLabel">Report Title</Form.Label>
+          <Form.Control
+            type="text"
+            id="AF"
+            placeholder="Report Title"
+            className="AllergyFormText"
+          />
+        </Form.Group>
+        <Form.Group controlId="formGroupBP">
+          <Form.Label className="AllergyFormTextLabel">Place</Form.Label>
+          <Form.Control
+            type="text"
+            id="AR"
+            className="AllergyFormText"
+            placeholder="Place"
+          />
+        </Form.Group>
+        <Form.Group controlId="formGroupBP">
+          <Form.Label className="AllergyFormTextLabel">Date</Form.Label>
+          <Form.Control
+            type="text"
+            id="AS"
+            className="AllergyFormText"
+            placeholder="Date"
+          />
+        </Form.Group>
+        <Form.Group controlId="formGroupBP">
+          <Form.Label className="AllergyFormTextLabel">Description</Form.Label>
+          <Form.Control
+            type="text"
+            id="AT"
+            className="AllergyFormText"
+            placeholder="Description"
+          />
+        </Form.Group>
+        <Form.Group controlId="formGroupBP">
+          <Form.Label className="AllergyFormTextLabel">Medication</Form.Label>
+          <Form.Control
+            type="text"
+            id="AU"
+            className="AllergyFormText"
+            placeholder="Medication"
+          />
+        </Form.Group>
+        <br />
+        <Button variant="primary" type="submit" className="AllergyButton">
+          Submit
+        </Button>
       </Form>
-  </Jumbotron>
-</div>
+    </Jumbotron>
+  </div>
 );
 };
 
