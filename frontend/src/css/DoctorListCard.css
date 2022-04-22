@@ -32,3 +32,7 @@
 .DoctorIcon {
     color: #6e7582;
 }
+.Allergy{
+    text-transform: none;
+    justify-content: left;
+}
